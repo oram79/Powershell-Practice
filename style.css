@@ -1,0 +1,38 @@
+h1 {
+    font-size: 30pt;
+    color: red;
+    font-family: "Bitcount Ink", sans-serif;
+}
+
+p {
+    font-size: 15pt;
+    font-family: "Bitcount Ink", sans-serif;
+    color: black;
+}
+
+input {
+    font-size: 15pt;
+    padding: 8px;
+    border: 2px solid #c700ff;
+    border-radius: 8px;
+}
+
+button {
+    font-size: 15pt;
+    font-family: "Bitcount Ink", sans-serif;
+    padding: 8px 16px;
+    background-color: white;
+    color: #c700ff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f3d9ff;
+}
+
+body {
+    text-align: center;
+}
