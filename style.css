@@ -1,12 +1,10 @@
 h1 {
     font-size: 30pt;
     color: red;
-    font-family: "Bitcount Ink", sans-serif;
 }
 
 p {
     font-size: 15pt;
-    font-family: "Bitcount Ink", sans-serif;
     color: black;
 }
 
@@ -19,7 +17,6 @@ input {
 
 button {
     font-size: 15pt;
-    font-family: "Bitcount Ink", sans-serif;
     padding: 8px 16px;
     background-color: white;
     color: #c700ff;
