@@ -1,32 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP3126 PowerShell Practice</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Number Guessing Game</h1>
-    <p>Pick any number from 1 to 100</p>
 
-    <input id="guess">
-    <button onclick="checkGuess()">Guess</button>
+    <!-- Replace YOUR-USERNAME in the links below with your GitHub username -->
 
-    <p id="message"></p>
+    <header class="hero">
+        <p class="tag">CP3126 &middot; Command Line</p>
+        <h1>PowerShell Practice</h1>
+        <p class="subtitle">Scripts, examples and notes from class. Nothing fancy, just the stuff I wrote while learning it.</p>
+        <div class="hero-buttons">
+            <a class="btn primary" href="https://github.com/oram79/Powershell-Practice/tree/main/Examples">Browse Examples</a>
+            <a class="btn" href="https://github.com/oram79/Powershell-Practice">View Repo</a>
+        </div>
+    </header>
 
-    <script>
-        let secretNumber = Math.floor(Math.random() * 100) + 1;
-        let tries = 0;
+    <main>
 
-        function checkGuess() {
-            let guess = Number(document.getElementById("guess").value);
-            tries = tries + 1;
+        <section>
+            <h2>What's in here</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Examples/</h3>
+                    <p>The class scripts. Small exercises, practice runs and anything I tested along the way.</p>
+                </div>
+                <div class="card">
+                    <h3>README.md</h3>
+                    <p>Quick notes on the repo and what each part is for.</p>
+                </div>
+            </div>
+        </section>
 
-            if (guess < secretNumber) {
-                document.getElementById("message").innerText = "The number is higher";
-            } else if (guess > secretNumber) {
-                document.getElementById("message").innerText = "The number is lower";
-            } else {
-                document.getElementById("message").innerText = "You got it! It took you " + tries + " tries.";
-            }
-        }
-    </script>
+        <section>
+            <h2>Topics covered</h2>
+            <ul class="topics">
+                <li><span>Unit 1&ndash;2</span> Windows command line basics, absolute &amp; relative paths</li>
+                <li><span>Unit 3</span> Intro to PowerShell</li>
+                <li><span>Unit 4</span> Basic cmdlets &amp; aliases</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Running a script</h2>
+            <p>From a PowerShell terminal in the repo folder:</p>
+            <pre><code><span class="prompt">PS&gt;</span> cd Examples
+<span class="prompt">PS&gt;</span> .\script-name.ps1</code></pre>
+            <p class="note">If Windows blocks it, allow scripts for just this session:</p>
+            <pre><code><span class="prompt">PS&gt;</span> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass</code></pre>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Logan Oram &middot; SNA Program, College of the North Atlantic</p>
+    </footer>
+
 </body>
 </html>

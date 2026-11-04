@@ -1,35 +1,196 @@
-h1 {
-    font-size: 30pt;
-    color: red;
+:root {
+    --bg: #0f1420;
+    --panel: #171e2e;
+    --border: #2a3448;
+    --text: #e3e8f2;
+    --muted: #8f9bb3;
+    --accent: #c700ff;
+    --accent-soft: #f3d9ff;
+    --ps-blue: #4aa8ff;
 }
 
-p {
-    font-size: 15pt;
-    color: black;
-}
-
-input {
-    font-size: 15pt;
-    padding: 8px;
-    border: 2px solid #c700ff;
-    border-radius: 8px;
-}
-
-button {
-    font-size: 15pt;
-    padding: 8px 16px;
-    background-color: white;
-    color: #c700ff;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #f3d9ff;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+
+.hero {
     text-align: center;
+    padding: 80px 20px 60px;
+    background: radial-gradient(circle at top, rgba(199, 0, 255, 0.18), transparent 60%);
+    border-bottom: 1px solid var(--border);
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 4px 14px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+    border-color: var(--accent);
+}
+
+.btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    box-shadow: 0 2px 10px rgba(199, 0, 255, 0.35);
+}
+
+.btn.primary:hover {
+    background: #a800d8;
+}
+
+/* ---------- Main content ---------- */
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 48px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 4px solid var(--accent);
+}
+
+h3 {
+    font-family: Consolas, "Cascadia Code", monospace;
+    color: var(--ps-blue);
+    margin-bottom: 6px;
+}
+
+p {
+    color: var(--muted);
+}
+
+/* Cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Topic list */
+
+.topics {
+    list-style: none;
+}
+
+.topics li {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
+
+.topics span {
+    display: inline-block;
+    min-width: 80px;
+    font-weight: 700;
+    color: var(--accent-soft);
+}
+
+/* Code blocks */
+
+pre {
+    background: #012456; /* classic PowerShell blue */
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px 0 16px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: Consolas, "Cascadia Code", monospace;
+    color: #eef2f8;
+    font-size: 0.95rem;
+}
+
+.prompt {
+    color: #ffd75f;
+    margin-right: 6px;
+}
+
+.note {
+    font-size: 0.9rem;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    text-align: center;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.2rem;
+    }
 }
